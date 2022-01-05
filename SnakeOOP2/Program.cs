@@ -16,7 +16,7 @@ namespace SnakeOOP
             Snake snake = new Snake(snakeTail, 5, Direction.RIGHT);
             snake.Draw();
 
-            FoodGenerator foodGenerator = new FoodGenerator(80, 25, '*');
+            FoodGenerator foodGenerator = new FoodGenerator(79, 24, '*');
             Point food = foodGenerator.GenerateFood();
             food.Draw();
 
@@ -36,6 +36,7 @@ namespace SnakeOOP
                 else
                 {
                     snake.Move();
+                    Console.ForegroundColor = ConsoleColor.Green;
                 }
 
                 if (Console.KeyAvailable)
@@ -55,14 +56,14 @@ namespace SnakeOOP
         {
             int xOffset = 25;
             int yOffset = 8;
-            Console.ForegroundColor = ConsoleColor.Red;
+            Console.ForegroundColor = ConsoleColor.Cyan;
             Console.SetCursorPosition(xOffset, yOffset++);
-            WriteText("_________________________", xOffset, yOffset++);
-            WriteText("        Mäng läbi       ", xOffset + 1, yOffset++);
+            WriteText("_____________________________________________", xOffset, yOffset++);
+            WriteText("     Haha sa kaotasid nii halb oled       ", xOffset + 1, yOffset++);
             yOffset++;
-            WriteText($" Sina said {score} Punkti", xOffset + 2, yOffset++);
+            WriteText($"      Sina said ainult {score} Punkti", xOffset + 2, yOffset++);
             WriteText("", xOffset + 1, yOffset++);
-            WriteText("_________________________", xOffset, yOffset++);
+            WriteText("_____________________________________________", xOffset, yOffset++);
         }
 
 

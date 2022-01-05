@@ -11,6 +11,7 @@ namespace SnakeOOP
 
         public HorizontalLine(int xLeft, int xRight, int y, char symb)
         {
+            Console.ForegroundColor = ConsoleColor.Yellow;
             pointList = new List<Point>();
 
             for (int i = xLeft; i <= xRight; i++)
