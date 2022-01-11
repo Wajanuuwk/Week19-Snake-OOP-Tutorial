@@ -9,6 +9,7 @@ namespace SnakeOOP
         static void Main(string[] args)
         {
             int score = 0;
+            int x = 100;
             Walls walls = new Walls(80, 25);
             walls.Draw();
 
@@ -19,6 +20,8 @@ namespace SnakeOOP
             FoodGenerator foodGenerator = new FoodGenerator(79, 24, '*');
             Point food = foodGenerator.GenerateFood();
             food.Draw();
+
+
 
             while (true)
             {
@@ -32,6 +35,8 @@ namespace SnakeOOP
                     food = foodGenerator.GenerateFood();
                     food.Draw();
                     score++;
+                    Console.Beep();
+                    x = x - 10;
                 }
                 else
                 {
@@ -44,7 +49,7 @@ namespace SnakeOOP
                     ConsoleKeyInfo key = Console.ReadKey();
                     snake.HandleKeys(key.Key);
                 }
-                Thread.Sleep(300);
+                Thread.Sleep(x);
 
             }
             string str_score = Convert.ToString(score);

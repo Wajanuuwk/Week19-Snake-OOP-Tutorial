@@ -19,7 +19,7 @@ namespace SnakeOOP
             VerticalLine obstacle = new VerticalLine(10, 20, 50, '|');
             HorizontalLine obstacle1 = new HorizontalLine(10, 30, 20, '_');
             VerticalLine obstacle2 = new VerticalLine(10, 20, 70, '|');
-
+            
 
 
             wallList.Add(top);
